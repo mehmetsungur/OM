@@ -1,0 +1,161 @@
+﻿@using OM.Entity.Complex.DashBoard.Task
+@{
+    ViewBag.Title = "Task";
+    Layout = "~/Areas/DashBoard/Views/Shared/_Layout.cshtml";
+}
+@model List<TaskListVM>
+<div class="row mt-2">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-sm-4">
+                    <a href="#CreateTask" class="btn btn-danger waves-effect waves-light"
+                       data-animation="makeway" data-plugin="custommodal" data-overlaycolor="#72a3c1">
+                        <i class="mdi mdi-plus-circle mr-1"></i> Yeni Görev
+                    </a>
+                </div>
+                <div class="mt-2">
+                </div>
+                <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
+                    <thead>
+                        <tr>
+
+                            <th>Atayan</th>
+                            <th>Atanan</th>
+                            <th>Atama Tarihi</th>
+                            <th>Görev</th>
+                            <th>Durum</th>
+                            <th>Güncelleme Tarihi</th>
+                            <th>Açıklama</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (TaskListVM t in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @{
+                                        if (t.ShowFromAss == true)
+                                        {
+                                            <span id="spnFromAss"><img src="@t.FromAss" class="rounded-circle avatar-xs" /></span>
+                                        }
+                                        else
+                                        {
+                                            <span id="spnFromAss"><img src="@t.FromAss" class="rounded-circle avatar-xs" /></span>
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @{
+                                        if (t.ShowToAss == true)
+                                        {
+                                            <span id="spnToAss"><img src="@t.ToAss" class="rounded-circle avatar-xs" /></span>
+                                        }
+                                    }
+                                </td>
+                                <td><span id="spCreated">@t.Created.ToShortDateString()</span></td>
+                                <td><span id="spnName">@t.Name</span></td>
+                                <td>
+                                    @{
+                                        if (t.State)
+                                        {
+                                            <span class="badge font-14 bg-soft-success text-success p-1" IsTaskState="true">Görev Tamamlandı</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge font-14 bg-soft-info text-info p-1" IsTaskState="false">Görev Bekleniyor</span>
+                                        }
+                                    }
+                                </td>
+                                <td><span id="spnModified">@t.Modified.ToShortDateString()</span></td>
+                                <td><span id="spnDescription">@t.Description</span></td>
+                                <td>
+                                    <img id="imgTaskEdit" src="~/Areas/DashBoard/Content/img/Custom/DataTable/edit2.png" style="width:20px;" TaskId="@t.Id" />
+                                </td>
+                                <td>
+                                    <img id="imgTaskDelete" src="~/Areas/DashBoard/Content/img/Custom/DataTable/delete2.png" style="width:20px;" TaskId="@t.Id" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="CreateTask" class="modal-demo">
+    <button type="button" class="close" onclick="Custombox.modal.close();">
+        <span>&times;</span><span class="sr-only"></span>
+    </button>
+    <h4 class="custom-modal-title">Yeni Görev Ata</h4>
+    <div class="custom-modal-text text-left">
+        <form id="frmTask">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Personel Kodu *</label>
+                    <input type="text" class="form-control" id="txtTaskUserId" name="txtTaskUserId" placeholder="Personel Kodu" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Personel kodlarını İnsan Kaynakları modülünden <a href="/DashBoard/HR/HR">öğrenebilirsiniz.</a></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label>Görev *</label>
+                    <input type="text" class="form-control" id="txtTaskName" name="txtTaskName" placeholder="Görev" required>
+                </div>
+            </div>
+            <div class="text-right">
+                <button type="button" id="btnTaskSave" class="btn btn-success waves-effect waves-light">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="divTaskEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <div class="modal-header">
+                            <h4 class="text-uppercase" style="color:forestgreen;">GÖREV GÜNCELLE</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="hfTaskIdEdit" />
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label>Görev</label>
+                                    <input type="text" class="form-control" id="txtTaskEditName" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label>Görev Durumu *</label>
+                                    <table>
+                                        <tr>
+                                            <td><b style="color:forestgreen">Görev Tamamlandı</b></td>
+                                            <td><input style="width:20px;" type="radio" class="form-control" id="rdbTrue" name="State" /></td>
+                                            <td><b style="color:dodgerblue;">Görev Bekleniyor</b></td>
+                                            <td><input style="width:20px;" type="radio" class="form-control" id="rdbFalse" name="State" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label>Açıklama</label>
+                                    <textarea class="form-control" id="txtTaskEditDescription" rows="3" placeholder="Açıklama" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pull-right">
+                            <button id="btnTaskUpdate" type="button" class="btn btn-fill btn-success">Güncelle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@if (ViewData["result"] != null)
+{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+
+    if (ViewData["result"] == "Onay")
+    {
+        <script>
+            Swal({
+                type: 'success',
+                title: 'TEBRİKLER!',
+                text: 'İletişim talebiniz alındı!' +
+                    ' En kısa sürede geri dönüş yapılacaktır...'
+            })
+        </script>
+    }
+
+    if (ViewData["result"] == "Hata")
+    {
+        <script>
+            Swal({
+                type: 'error',
+                title: 'Beklenmeyen Bir Hatayla Karşılaştık!',
+                text: 'Formu Yeniden Göndermeyi Deneyebilir Veya Telefonla Ulaşabilirsiniz!',
+                target: '#contact',
+                footer: '<a href="#contact">Formu Yeniden Gönder...</a>'
+            })
+        </script>
+    }
+}

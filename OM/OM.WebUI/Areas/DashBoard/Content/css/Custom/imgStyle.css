@@ -1,0 +1,21 @@
+﻿@media (min-width:200px) and (max-width:767px) {
+    #userProfileImg {
+        margin-top:20px;
+    }
+}
+body {
+    background: #CCCCCC;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 20px;
+    padding: 0px;
+    color: #000000;
+    height: 3000px;
+}
+.error {
+    color: orangered;
+    width: 500px;
+    float: left;
+    margin-left: 5px;
+    font-weight: bold;
+}

@@ -1,0 +1,57 @@
+﻿@using OM.Entity.Domain
+@{
+    User activeUser = Session["ActiveUser"] as User;
+}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>OLGUN MAKİNA - LogLock Sayfası</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="~/Areas/DashBoard/Content/img/Default/favicon.ico">
+    @Styles.Render("~/css/Custom/LogX")
+    @Styles.Render("~/css/Default")
+</head>
+<body class="authentication-bg authentication-bg-pattern">
+    <div class="account-pages mt-5 mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card bg-pattern">
+                        <div class="card-body p-4">
+                            <div class="text-center w-75 m-auto">
+                                <a href="/Home/Index">
+                                    <span><img src="~/Areas/DashBoard/Content/img/Default/logo-dark.png" alt="" height="22"></span>
+                                </a>
+                            </div>
+                            <div class="text-center w-75 m-auto">
+                                <img src="@activeUser.Photo" height="88" alt="user-image" class="rounded-circle shadow">
+                                <h4 class="text-dark-50 text-center mt-3">Merhaba @activeUser.FullName </h4>
+                                <p class="text-muted mb-4">DashBoarda gitmek için lütfen şifrenizi giriniz.</p>
+                            </div>
+                            <form>
+                                <div class="form-group mb-3">
+                                    <label>Şifre</label>
+                                    <input class="form-control" type="password" id="txtPassword" placeholder="Şifre" required="">
+                                </div>
+                                <div class="form-group mb-0 text-center">
+                                    <button id="btnLogLock" class="ladda-button btn btn-warning btn-block" data-style="zoom-out" type="button"> Giriş </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12 text-center">
+                            <p class="text-white-50"><a href="/DashBoard/LogX/LogIn" class="text-white ml-1"><b>Giriş</b></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_PartialLogXFooter")
+    @Scripts.Render("~/js/Custom/LogX")
+</body>
+</html>

@@ -1,0 +1,150 @@
+﻿@using OM.Entity.Complex.Expense
+@{
+    ViewBag.Title = "Personnel";
+    Layout = "~/Areas/DashBoard/Views/Shared/_Layout.cshtml";
+}
+@model List<ExpenseListVM>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-sm-4">
+                    <a href="#CreatePersonnel" class="btn btn-danger waves-effect waves-light"
+                       data-animation="makeway" data-plugin="custommodal" data-overlaycolor="#72a3c1">
+                        <i class="mdi mdi-plus-circle mr-1"></i> Yeni Gider
+                    </a>
+                </div>
+                <div class="mt-2">
+                </div>
+                <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th>İşlem Tarihi</th>
+                            <th>İşlem</th>
+                            <th>Firma</th>
+                            <th>Ödeme Tarihi</th>
+                            <th>Tutar</th>
+                            <th>Açıklama</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (ExpenseListVM ex in Model)
+                        {
+                            <tr>
+                                <td><span id="spnProcessDate">@ex.ProcessDate.ToShortDateString()</span></td>
+                                <td><span id="spnProcess">@ex.Process</span></td>
+                                <td><span id="spnCompanyName">@ex.CompanyName</span></td>
+                                <td><span id="spnPayDate">@ex.PayDate.ToShortDateString()</span></td>
+                                <td><span id="spnPrice">@ex.Price</span> ₺</td>
+                                <td><span id="spnDescription">@ex.Description</span></td>
+                                <td>
+                                    <img id="imgPersonnelEdit" src="~/Areas/DashBoard/Content/img/Custom/DataTable/edit2.png" style="width:20px;" PersonnelId="@ex.Id" />
+                                </td>
+                                <td>
+                                    <img id="imgPersonnelDelete" src="~/Areas/DashBoard/Content/img/Custom/DataTable/delete2.png" style="width:20px;" PersonnelId="@ex.Id" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="CreatePersonnel" class="modal-demo">
+    <button type="button" class="close" onclick="Custombox.modal.close();">
+        <span>&times;</span><span class="sr-only"></span>
+    </button>
+    <h4 class="custom-modal-title">Yeni Gider Ekle</h4>
+    <div class="custom-modal-text text-left">
+        <form id="frmPersonnel">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>İşlem Tarihi *</label>
+                    <input type="date" class="form-control" id="txtPersonnelProcessDate" name="txtPersonnelProcessDate" placeholder="İşlem Tarihi" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>İşlem *</label>
+                    <input type="text" class="form-control" id="txtPersonnelProcess" name="txtPersonnelProcess" placeholder="İşlem" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Firma *</label>
+                    <input type="text" class="form-control" id="txtPersonnelCompanyName" name="txtPersonnelCompanyName" placeholder="Firma" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Ödeme Tarihi *</label>
+                    <input type="date" class="form-control" id="txtPersonnelPayDate" name="txtPersonnelPayDate" placeholder="Ödeme Tarihi" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Tutar *</label>
+                    <input type="text" class="form-control" id="txtPersonnelPrice" name="txtPersonnelPrice" placeholder="Tutar" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Açıklama *</label>
+                    <textarea class="form-control" id="txtPersonnelDescription" name="txtPersonnelDescription" rows="2" placeholder="Açıklama" required></textarea>
+                </div>
+            </div>
+            <div class="text-right">
+                <button type="button" id="btnPersonnelSave" class="btn btn-success waves-effect waves-light">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="divPersonnelEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <div class="modal-header">
+                            <h4 class="text-uppercase" style="color:forestgreen;">PERSONEL GİDER GÜNCELLE</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="hfPersonnelIdEdit" />
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>İşlem Tarihi</label>
+                                    <input type="date" class="form-control" id="txtPersonnelEditProcessDate" placeholder="İşlem Tarihi" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>İşlem</label>
+                                    <input type="text" class="form-control" id="txtPersonnelEditProcess" placeholder="İşlem" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>Firma</label>
+                                    <input type="text" class="form-control" id="txtPersonnelEditCompanyName" placeholder="Firma" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Ödeme Tarihi</label>
+                                    <input type="date" class="form-control" id="txtPersonnelEditPayDate" placeholder="Ödeme Tarihi" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>Tutar</label>
+                                    <input type="text" class="form-control" id="txtPersonnelEditPrice" placeholder="Tutar" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Açıklama *</label>
+                                    <textarea class="form-control" id="txtPersonnelEditDescription" rows="2" placeholder="Açıklama" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pull-right">
+                            <button id="btnPersonnelUpdate" type="button" class="btn btn-fill btn-success">Güncelle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Areas/DashBoard/Content/js/Custom/Search.js"></script>

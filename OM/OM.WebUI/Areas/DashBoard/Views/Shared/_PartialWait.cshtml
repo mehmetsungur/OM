@@ -1,0 +1,10 @@
+﻿<div id="loadingPage">
+    <div id="divWaitScreen">
+        <img src="~/Areas/DashBoard/Content/img/Default/loading.gif" style="width:50px;margin:20% 45%;" />
+    </div>
+</div>
+<script>
+    $("#loadingPage").fadeOut(2500, function () {
+        $(".row").fadeIn(750);
+    });
+</script>

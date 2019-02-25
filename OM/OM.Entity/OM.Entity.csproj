@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F32038D-9547-41EE-884B-25A3DAAD543B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OM.Entity</RootNamespace>
+    <AssemblyName>OM.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Complex\Customer\Company\CompanyListVM.cs" />
+    <Compile Include="Complex\Customer\Company\CreateCompanyVM.cs" />
+    <Compile Include="Complex\Customer\Company\DeleteCompanyVM.cs" />
+    <Compile Include="Complex\Customer\Company\UpdateCompanyVM.cs" />
+    <Compile Include="Complex\Customer\Meet\DeleteMeetVM.cs" />
+    <Compile Include="Complex\Customer\Meet\UpdateMeetVM.cs" />
+    <Compile Include="Complex\Customer\Meet\CreateMeetVM.cs" />
+    <Compile Include="Complex\Customer\Meet\MeetListVM.cs" />
+    <Compile Include="Complex\Customer\Portfolio\CreateCustomerVM.cs" />
+    <Compile Include="Complex\Customer\Portfolio\CustomerListVM.cs" />
+    <Compile Include="Complex\Customer\Portfolio\DeleteCustomerVM.cs" />
+    <Compile Include="Complex\Customer\Portfolio\UpdateCustomerVM.cs" />
+    <Compile Include="Complex\Customer\Project\CreateProjectVM.cs" />
+    <Compile Include="Complex\Customer\Project\ProjectListVM.cs" />
+    <Compile Include="Complex\Customer\Project\DeleteProjectVM.cs" />
+    <Compile Include="Complex\Customer\Project\UpdateProjectVM.cs" />
+    <Compile Include="Complex\DashBoard\Task\CreateTaskVM.cs" />
+    <Compile Include="Complex\DashBoard\Task\DeleteTaskVM.cs" />
+    <Compile Include="Complex\DashBoard\Task\TaskListVM.cs" />
+    <Compile Include="Complex\DashBoard\Task\UpdateTaskVM.cs" />
+    <Compile Include="Complex\Expense\CreateExpenseVM.cs" />
+    <Compile Include="Complex\Expense\DeleteExpenseVM.cs" />
+    <Compile Include="Complex\Expense\ExpenseListVM.cs" />
+    <Compile Include="Complex\Expense\UpdateExpenseVM.cs" />
+    <Compile Include="Complex\HR\UserListVM.cs" />
+    <Compile Include="Complex\LogX\LogInVM.cs" />
+    <Compile Include="Complex\LogX\LogLockVM.cs" />
+    <Compile Include="Complex\Product\CreateProductVM.cs" />
+    <Compile Include="Complex\Product\DeleteProductVM.cs" />
+    <Compile Include="Complex\Product\ProductListVM.cs" />
+    <Compile Include="Complex\Product\UpdateProductVM.cs" />
+    <Compile Include="Domain\Customer.cs" />
+    <Compile Include="Domain\Expense.cs" />
+    <Compile Include="Domain\Meet.cs" />
+    <Compile Include="Domain\Task.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\Category.cs" />
+    <Compile Include="Domain\Company.cs" />
+    <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\Role.cs" />
+    <Compile Include="Domain\Work.cs" />
+    <Compile Include="Enum\Roles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OIT.Core\OIT.Core.csproj">
+      <Project>{658a8ee0-949a-4a85-90c5-bee4749743f5}</Project>
+      <Name>OIT.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Complex\Front\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

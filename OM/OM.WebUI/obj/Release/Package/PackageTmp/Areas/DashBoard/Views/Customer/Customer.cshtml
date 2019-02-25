@@ -1,0 +1,175 @@
+﻿@using OM.Entity.Complex.Customer.Portfolio
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Areas/DashBoard/Views/Shared/_Layout.cshtml";
+}
+@model List<CustomerListVM>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="col-sm-4">
+                    <a href="#CreateCustomer" class="btn btn-danger waves-effect waves-light"
+                       data-animation="makeway" data-plugin="custommodal" data-overlaycolor="#72a3c1">
+                        <i class="mdi mdi-plus-circle mr-1"></i> Yeni Müşteri
+                    </a>
+                </div>
+                <div class="mt-2">
+                </div>
+                <table id="datatable-buttons" class="table table-striped dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th>Tarih</th>
+                            <th>Şirket</th>
+                            <th>Adı Soyadı</th>
+                            <th>Ünvanı</th>
+                            <th>Şehir</th>
+                            <th>İlçe</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Açıklama</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (CustomerListVM c in Model)
+                        {
+                            <tr>
+                                <td><span id="spnCreated">@c.Created.ToShortDateString()</span></td>
+                                <td><span id="spnCompanyName">@c.CompanyName</span></td>
+                                <td><span id="spnContact">@c.Contact</span></td>
+                                <td><span id="spnCaption">@c.Caption</span></td>
+                                <td><span id="spnCity">@c.City</span></td>
+                                <td><span id="spnDistrict">@c.District</span></td>
+                                <td><span id="spnEmail">@c.Email</span></td>
+                                <td><span id="spnPhone">@c.Phone</span></td>
+                                <td><span id="spnDescription">@c.Description</span></td>
+                                <td>
+                                    <img id="imgCustomerEdit" src="~/Areas/DashBoard/Content/img/Custom/DataTable/edit.png" style="width:20px;" CustomerId="@c.Id" />
+                                </td>
+                                <td>
+                                    <img id="imgCustomerDelete" src="~/Areas/DashBoard/Content/img/Custom/DataTable/delete.png" style="width:20px;" CustomerId="@c.Id" />
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="CreateCustomer" class="modal-demo">
+    <button type="button" class="close" onclick="Custombox.modal.close();">
+        <span>&times;</span><span class="sr-only"></span>
+    </button>
+    <h4 class="custom-modal-title">Yeni Müşteri Ekle</h4>
+    <div class="custom-modal-text text-left">
+        <form id="frmCustomer">
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Şirket *</label>
+                    <input type="text" class="form-control" id="txtCustomerCompanyName" name="txtCustomerCompanyName" placeholder="Şirket" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Adı Soyadı *</label>
+                    <input type="text" class="form-control" id="txtCustomerContact" name="txtCustomerContact" placeholder="Adı Soyadı" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label>Ünvanı *</label>
+                    <input type="text" class="form-control" id="txtCustomerCaption" name="txtCustomerCaption" placeholder="Ünvanı" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Şehir *</label>
+                    <input type="text" class="form-control" id="txtCustomerCity" name="txtCustomerCity" placeholder="Şehir" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>İlçe *</label>
+                    <input type="text" class="form-control" id="txtCustomerDistrict" name="txtCustomerDistrict" placeholder="İlçe" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Email *</label>
+                    <input type="email" class="form-control" id="txtCustomerEmail" name="txtCustomerEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Telefon *</label>
+                    <input type="text" class="form-control" id="txtCustomerPhone" name="txtCustomerPhone" placeholder="Telefon" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label>Açıklama *</label>
+                    <textarea class="form-control" id="txtCustomerDescription" name="txtCustomerDescription" rows="3" placeholder="Açıklama" required></textarea>
+                </div>
+            </div>
+            <div class="text-right">
+                <button type="button" id="btnCustomerSave" class="btn btn-success waves-effect waves-light">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="divCustomerEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <div class="modal-header">
+                            <h4 class="text-uppercase" style="color:forestgreen;">MÜŞTERİ GÜNCELLE</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="hfCustomerIdEdit" />
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>Şirket</label>
+                                    <input type="text" class="form-control" id="txtCustomerEditCompanyName" placeholder="Şirket" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Adı Soyadı</label>
+                                    <input type="text" class="form-control" id="txtCustomerEditContact" placeholder="Adı Soyadı" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-4">
+                                    <label>Ünvanı</label>
+                                    <input type="text" class="form-control" id="txtCustomerEditCaption" placeholder="Ünvanı" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>Şehir</label>
+                                    <input type="text" class="form-control" id="txtCustomerEditCity" placeholder="Şehir" required>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label>İlçe</label>
+                                    <input type="text" class="form-control" id="txtCustomerEditDistrict" placeholder="İlçe" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" id="txtCustomerEditEmail" placeholder="Email" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Telefon</label>
+                                    <input type="text" class="form-control" id="txtCustomerEditPhone" placeholder="Telefon" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <label>Açıklama *</label>
+                                    <textarea class="form-control" id="txtCustomerEditDescription" rows="3" placeholder="Açıklama" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pull-right">
+                            <button id="btnCustomerUpdate" type="button" class="btn btn-fill btn-success">Güncelle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

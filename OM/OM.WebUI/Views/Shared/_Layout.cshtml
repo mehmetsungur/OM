@@ -1,0 +1,1313 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>OLGUN MAKİNA - Kurumsal Web Sayfası</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="~/Areas/DashBoard/Content/img/Default/favicon.ico">
+
+    @Styles.Render("~/css/Front")
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="~/sss/sss.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('.slider-testimonial').sss({
+                slideShow: true,
+                speed: 3500
+            });
+        });
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body id="page-top">
+    @Html.Partial("_PartialNav")
+
+    @Html.Partial("_PartialHeader")
+
+    @Html.Partial("_PartialServices")
+
+    @Html.Partial("_PartialPortfolio")
+
+    @Html.Partial("_PartialAbout")
+
+    @Html.Partial("_PartialTeam")
+
+    @Html.Partial("_PartialReference")
+
+    @Html.Partial("_PartialContact")
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @Html.Partial("_PartialFooter")
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <div class="modal-body">
+                                <h2 class="text-uppercase">Makaslı Platformlar</h2>
+                                <p class="item-intro text-muted">Akülü</p>
+                                <p>
+                                    Müşteri talebini karşılamayı hedefleyen maksimum çalışma yüksekliği 8 m, 12 m ve 14 m seviyeli makaslı  platformlarımız; kompakt yapısı ile her alana uygun, yeni elektirik tahrik sistemi ile çevre dostu, mükemmel emniyet koruması, bağımsız tasarlanmış kontrol sistemi, genişleyebilen platform çalışma alanı ile en büyük yardımcınızdır.
+                                </p>
+                                <div class="card-deck">
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/01-1.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTJZ0607</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>1882</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>760</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>1771</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>7.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>5.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Uzatma Platformu Yükü (kg)</th>
+                                                        <td>115</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Boyutu (mm)</th>
+                                                        <td>1655x740x1226</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Uzatma Uzunluğu (mm)</th>
+                                                        <td>900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Sınıf Yeteneği (%)</th>
+                                                        <td>25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Akü (V/Ah)</th>
+                                                        <td>4x6(225)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>1490</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/01-2.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTJZ1012</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk (mm)</th>
+                                                        <td>2485</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>1170</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>1908</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>320</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Uzatma Platformu Yükü (kg)</th>
+                                                        <td>115</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Boyutu (mm)</th>
+                                                        <td>2276x1120x1254</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Uzatma Uzunluğu (mm)</th>
+                                                        <td>900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Sınıf Yeteneği (%)</th>
+                                                        <td>25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Akü (V/Ah)</th>
+                                                        <td>4x6(240)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>3000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/01-3.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTJZ1212</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk (mm)</th>
+                                                        <td>2485</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>1190</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>2036</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>13.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>11.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>320</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Uzatma Platformu Yükü (kg)</th>
+                                                        <td>115</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Boyutu (mm)</th>
+                                                        <td>2276x1120x1254</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Uzatma Uzunluğu (mm)</th>
+                                                        <td>900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Sınıf Yeteneği (%)</th>
+                                                        <td>25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Akü (V/Ah)</th>
+                                                        <td>4x12(300)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>3150</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <div class="modal-body">
+                                <h2 class="text-uppercase">Eklemlİ Platformlar</h2>
+                                <p class="item-intro text-muted">Akülü - Dizel</p>
+                                <p>
+                                    Müşteri talebini karşılamayı hedefleyen maksimum çalışma yüksekliği 14 m, 18 m ve 24 m seviyeli eklemli platformlarımız, akıllı ve mükemmel kontrol sistemi ile kullanımı ve bakımı ergonomiktir. Kapsamlı güvenlik koruması ile çalışma  güvenliğini ön planda tutmaktaır. Havaalanlarında, İnşaat söktöründe(mekanik,havalandırma,elektirik,izolasyon vb.) Avmlerde, Temizlik, Dekorasyon vb. birçok alanda en büyük yardımcınızdır.
+                                </p>
+                                <div class="card-deck">
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/02-1.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ14</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>5780</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>2260</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>2130</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>2100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>15.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>14.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>8.09</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>355</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>1830*760*1150</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>6800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>6.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>4.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>250</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Derece Yetenek (%)</th>
+                                                        <td>45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>315/55D20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>Perkins/404d-22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Nominal Gücü (kW / (d/dk))</th>
+                                                        <td>38/(3000)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/02-2.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ14JD</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>6420</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>1750</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>2000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>2010</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>15.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>13.8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>355</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>700*1400*1150</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>3500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>5.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>3.15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>200</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Tırmanma Kabiliyeti (%)</th>
+                                                        <td>30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>250-15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>-</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/02-3.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ18A1</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>5780</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>2260</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>2130</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>2100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>15.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>14.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>8.09</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>355</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>1830*760*1150</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>6800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>6.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>4.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>250</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Derece Yetenek (%)</th>
+                                                        <td>45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>315/55D20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>Perkins/404d-22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Nominal Gücü (kW / (d/dk))</th>
+                                                        <td>38/(3000)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="card-deck">
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/02-4.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ14E</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>6690</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>2260</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>2130</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>2100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>15.75</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>14.05</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>8.22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>355</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>1830*760*1150</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>6900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>6.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>4.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>250</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Derece Yetenek (%)</th>
+                                                        <td>45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>315/55D20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>Perkins/404d-22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Nominal Gücü (kW / (d/dk))</th>
+                                                        <td>38/(3000)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/02-5.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ14J</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>6690</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>2260</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>2130</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>2100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>15.75</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>14.05</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>8.22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Krank Kolu Uzatma Aralığı (Derece)</th>
+                                                        <td>-60~+80</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>355</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>1830*760*1150</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>6900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>6.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>4.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>250</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Derece Yetenek (%)</th>
+                                                        <td>45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>315/55D20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>Perkins/404d-22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>38/(3000)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/02-6.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ24A</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>11280</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>2490</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>3000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>3000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>26.08</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>24.38</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>18.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>360</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>2400*900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>17800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>260</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Tırmanma Kabiliyeti (%)</th>
+                                                        <td>45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>18/625</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>QSF2.8 71BHP/KDI2504 TCR</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Nominal Gücü (kW / (d/dk))</th>
+                                                        <td>53(2200)/55.4(2600)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <h2 class="text-uppercase">Teleskobİk Platformlar</h2>
+                                <p class="item-intro text-muted">Dizel</p>
+                                <p>
+                                    Müşteri talebini karşılamayı hedefleyen maksimum çalışma yüksekliği 22 m, 26 m, 30 m ve 38 m  seviyeli teleskobik boomlu platformlarımız; güvenlik sistemleri, geniş yükseklikteki çalışma aralıkları ile makina, inşaat işlemleri, köprü ve ekipman bakımı, gemi yapımı,çelik yapılar, petrokimya mühendisliği ve diğer ilgili endüstriler için yaygın olarak kullanılabilir.
+                                </p>
+                                <div class="card-deck">
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/03-1.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ30S</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>13380</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>2490/3800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>3070</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>3800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>32.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>30.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>23.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>340/480</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>360</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>2400*900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>18300</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>10.8/8.2 (iki Tur)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>260</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Derece Yetenek (%)</th>
+                                                        <td>45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>385/65D22.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>Perkins/1104D-44T</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Nominal Gücü (kW / (d/dk))</th>
+                                                        <td>55.5/(2400)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/03-2.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ38S</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>14060</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>13800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>3000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>3800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>39.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>38.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>23.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>230/340</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>360</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>2400*900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>20600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>10.8/6.8 (iki Tur)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>320</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Derece Yetenek (%)</th>
+                                                        <td>40</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>445/50D710</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>Perkins 1104D-44T</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Nominal Gücü</th>
+                                                        <td>55.5/2400</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="card-deck">
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/03-3.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ26S</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>12100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>2490</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>3050</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>3000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>27.9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>26.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>23.2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>340</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>360</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>2400*900/1800*800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>16600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>6.1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>6.7</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Derece Yetenek (%)</th>
+                                                        <td>45</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>385/65-22.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>Foton CumminsQSF</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Nominal Gücü (kW / (d/dk))</th>
+                                                        <td>53/(2200)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img class="card-img-top" src="~/Content/img/portfolio/03-4.jpg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">GTBZ22S</h5>
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col">TEKNİK ÖZELLİKLER</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Genel Uzunluk<br />(mm)</th>
+                                                        <td>10150</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Genişlik (mm)</th>
+                                                        <td>2490</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Genel Yükseklik (mm)</th>
+                                                        <td>2800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Tekerlek Tabanı (mm)</th>
+                                                        <td>2500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Yüksekliği (m)</th>
+                                                        <td>23.7</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Platform Yüksekliği (m)</th>
+                                                        <td>22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Çalışma Aralığı (m)</th>
+                                                        <td>18.3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Yük Kapasitesi (kg)</th>
+                                                        <td>340</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Dönen Platformun Dönme Açısı (Derece)</th>
+                                                        <td>360</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Ölçüsü (mm)</th>
+                                                        <td>2400*900</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Platform Dönüş Açısı (Derece)</th>
+                                                        <td>180</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Toplam Ağırlık (kg)</th>
+                                                        <td>12500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Seyahat Hızı (km/s)</th>
+                                                        <td>6</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Dönüş Yarıçapı (m)</th>
+                                                        <td>6</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Min. Yerden Açıklık (mm)</th>
+                                                        <td>230</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Max. Derece Yetenek (%)</th>
+                                                        <td>40</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Lastik Özellikleri</th>
+                                                        <td>355/55D625</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Modeli</th>
+                                                        <td>Perkins 404D-22T</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Motor Nominal Gücü</th>
+                                                        <td>43/(2600)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="card-text"><small class="text-muted">Olgun Makina</small></p>
+                                            <a href="tel:+903122780033" class="btn btn-primary">HEMEN TEKLİF AL</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <h2 class="text-uppercase">Eklemli Platformlar</h2>
+                                <p class="item-intro text-muted">Akülü - Dizel</p>
+                                <p>
+                                    Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
+                                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="OnlyforMobile d-lg-none d-md-none">
+        <a href="tel:4441574" target="_blank" class="animated fadeInRight" style="position:absolute;right:20%;">
+            <img src="~/Content/img/hemenara1.png" style="position:fixed;bottom:40px;height:70px;width:70px; right: 5%;">
+        </a>
+    </div>
+
+    @Scripts.Render("~/js/Front")
+</body>
+</html>

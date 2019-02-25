@@ -1,0 +1,7 @@
+﻿@using OM.Entity.Domain
+@{
+    User activeUser = Session["ActiveUser"] as User;
+}
+@Html.Partial("_PartialNavbarCustom1", activeUser)
+@Html.Partial("_PartialNavbarCustom2")
+@Html.Partial("_PartialNavbarCustom3")
